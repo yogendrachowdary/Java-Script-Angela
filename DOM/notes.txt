@@ -1,0 +1,130 @@
+
+
+document gives the htmldocument then we go into the html tag :
+
+Here we find the location and changed the inner HTML of that tag to "Yogendra"
+var loc=document.firstElementChild.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.lastElementChild
+loc.innerHTML="Yogendra"
+
+------------------------------------------------------------------------------
+It will give an array of all li tags we hae to select the index and apply the property          
+document.getElementsByTagName("li");
+
+document.getElementsByTagName("li")[2].style.color="green";
+
+
+document.getElementsByTagName("li").length;
+
+->this will give us the the no of list tags
+
+------------------------------------------------------------------------------
+
+document.getElementsByClassName("btn").style.color="red";
+
+------------------------------------------------------------------------------
+document.getElementById("title").innerHTML="good bye";
+
+->Here we get a single element back as id's are unique
+
+------------------------------------------------------------------------------
+===>Query Selector
+
+works as all three above
+->AS Tag Selector
+document.querySelector("h1")
+
+->As Class Selector
+document.querySelector(".btn");
+note:here we write . bcz it is a Class
+
+->As Id Selector
+document.querySelector("#title");
+
+#->means id
+
+
+Note : It is the same way we access things in css
+
+document.querySelector("li a");
+
+->it selects the anchor tag in list which is eg of hirarical selector in css
+
+document.querySelector("#list a");
+
+something with id list and inside that anchor tag
+
+document.querySelector("#list .item");
+
+things which have id list and class item 
+
+but it gives only first occurence data
+
+to get all data use this
+
+document.querySelectorAll("#list .item");
+so it will give a list and pick based on index
+
+
+
+Mostly we will use querySelector bcz it has more functionality
+
+
+
+------------------------------------------------------------------------------
+
+MANIPULATING AND CHANGING STYLES OF HTML:
+
+->All sytles should be applied as a string and properties follow camel case
+
+document.querySelector("h1").style.fontSize="10rem";
+document.querySelector("h1").style.padding="10px";
+
+document.querySelector("button").style.backgroundColor="red";
+
+
+------------------------------------------------------------------------------
+Adding and removing classes to tags
+
+===>Hide,Unhide CSS using JS<===
+
+document.querySelector("button").classList.add("invisible");  //this adds another class to button tag
+
+document.querySelector("button").classList.remove("invisible");  //this removes another class to button tag
+
+document.querySelector("button").classList.toggle("invisible");  //this adds if not added and removes if added this invisible class to button tag
+
+
+ .invisible{
+    visibility:hidden
+ }
+
+ ------------------------------------------------------------------------------
+=>TEXT MANIPULATION AND TEXT CONTENT property
+
+document.querySelector("h1").innerHTML;
+
+
+document.querySelector("h1").textContent;
+
+The diff btwn above two is that text content will give the content in the give tag but innerHTML will give the HTML in that tag
+
+
+document.querySelector("h1").textContent="yogendra";
+here we just changed the text content to yogendra in that tag
+
+document.querySelector("h1").innerHTML="<center>GoodBye</center>;
+
+here we not only changed the text but also added html to the tag using js
+
+
+------------------------------------------------------------------------------
+
+
+=>MANIPULATING THE ATTRIBUTES OF THE HTML
+
+document.querySelector("a").attributes;//this will give all attributes of anchor tag
+
+document.querySelector("a").getAttribute("href");//this is used to get attribute of an html element
+
+document.querySelector("a").setAttribute("href","https://www.bing.com");//this will change the attribute of a tag
+
