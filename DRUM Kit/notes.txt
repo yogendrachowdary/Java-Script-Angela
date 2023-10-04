@@ -1,0 +1,50 @@
+
+#########Event Listener###########
+ document.querySelector("button").addEventListener("click",myListenrFunc); //here we write action, function name
+
+
+ function myListenrFunc(){
+     alert("I am Clicked!")
+ }
+
+another way which most people follow
+
+
+for( var i=0;i<document.querySelectorAll(".drum").length;i++){
+
+document.querySelectorAll(".drum")[i].addEventListener("click",function (){
+    alert("I am Clicked!")
+
+});
+
+}
+
+----------------------------------------------------------------------------------
+
+############ HIGHER ORDER FUNCTIONS ###################
+
+
+function add(a,b){
+    return a+b;
+}
+
+function sub(a,b){
+    return a-b;
+}
+
+function mul(a,b){
+    return a*b;
+}
+
+function div(a,b){
+    return a/b;
+}
+
+
+function calculator(a,b,operator){
+    return operator(a,b);
+}
+
+calculator(3,4,mul);
+
+
