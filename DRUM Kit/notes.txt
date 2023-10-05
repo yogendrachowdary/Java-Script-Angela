@@ -48,3 +48,48 @@ function calculator(a,b,operator){
 calculator(3,4,mul);
 
 
+###############Constructor##################
+
+
+Student1={
+    id:123,
+    name:"yogendra"
+}
+
+instead of above we write this
+
+
+function Student(id,name,section,city){
+    this.id=id;
+    this.name=name;
+    this.section=section;
+    this.city=city;
+}
+
+
+var s1=new Student(123,"yogendra",24,"vijayawada");
+
+console.log(s1.city);
+
+
+################Constructor function###############333333
+
+
+function Student(id,name,section,city,clean){
+    this.id=id;
+    this.name=name;
+    this.section=section;
+    this.city=city;
+    this.clean= function(){
+        alert("cleaning in progress");
+    }
+}
+
+
+var s1=new Student(123,"yogendra",24,"vijayawada");
+
+console.log(s1.city);
+s1.clean();
+
+
+
