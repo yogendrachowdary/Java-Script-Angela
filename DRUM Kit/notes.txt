@@ -93,3 +93,21 @@ s1.clean();
 
 
 
+###############higher order advancer############33
+function addEventListener(eventType,callback){
+
+
+    var eventThatHappened={
+        eventType:"keypress",
+        key: "p",
+        durationOfKeypress:2
+    }
+
+if(eventThatHappened===eventType)
+    callback(eventThatHappened);
+}
+
+addEventListener("keypress",function(event){
+    console.log(event);
+});
+

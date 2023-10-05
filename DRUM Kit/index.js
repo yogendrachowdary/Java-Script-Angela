@@ -11,6 +11,7 @@ document.querySelectorAll(".drum")[i].addEventListener("click",function (){
 var val=this.innerHTML;
 
 makeSound(val);
+buttonAnimation(val);
 
 
 });
@@ -21,11 +22,23 @@ makeSound(val);
 document.addEventListener("keypress",function (event) {
 
     makeSound(event.key);
+    buttonAnimation(event.key);
     
 });
 
 
 
+function buttonAnimation(val){
+
+    var activeButton=document.querySelector("."+val);
+
+    activeButton.classList.add("pressed");
+
+    setTimeout(function(){
+        activeButton.classList.remove("pressed");
+    },100);
+
+}
 
 
 //function to make sound based on the letter in val
