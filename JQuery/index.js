@@ -14,8 +14,14 @@ $("h1").click(function(){
 });
 
 $("button").on("click",function(){
-    $("h2").slideUp();
+    $("h2").slideUp().slideDown().animate({margin:70});
 });
+
+
+
+// $("button").on("click",function(){
+//     $("h2").animate({margin:50});
+// });
 
 
 $("h2").css("font-size","15rem");

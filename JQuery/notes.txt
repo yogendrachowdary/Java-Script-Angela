@@ -118,3 +118,42 @@ $("button").on("click",function(){
 $("button").on("click",function(){
     $("h2").fadeIn();
 });
+
+SLIDING Feature:
+
+$("button").on("click",function(){
+    $("h2").slideUp();
+});
+
+$("button").on("click",function(){
+    $("h2").slideToggle();
+});
+
+
+
+mouseover:
+
+$("h2").on("mouseover",function(){
+    $("h2").slideToggle();
+});
+
+ANIMATION:::::::::::::;
+
+$("button").on("click",function(){
+    $("h2").animate({opacity:0.5});
+});
+
+//HERE you can only use numeric value for animation like opacity, border, fontsize, margin
+
+$("button").on("click",function(){
+    $("h2").animate({margin:50});
+});
+
+
+
+
+Addding MULTIPLE ANIMATION:
+-------------------------------
+$("button").on("click",function(){
+    $("h2").slideUp().slideDown().animate({margin:70});
+});
