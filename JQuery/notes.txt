@@ -1,0 +1,120 @@
+we use $ to select a element in Jquery then manipulate it
+
+$("h1")
+
+$("button") it selects all the buttons
+
+-----------------------------------------------------
+MANIPULATING using Jquery:
+
+
+$("h1").css("color","red");
+
+$("h1").css("font-size","5rem");
+
+
+Intead of adding css here we add in styles.css from a style tag but using adding or removing classes
+
+For eg:
+
+style.css:
+
+.magic{
+color:green;
+font-family:serif;
+}
+
+index.js:
+$("h1").addClass("magic");
+
+
+$("h1").removeClass("magic");
+
+
+we can also check if an element has a particular class or not
+
+$("h1").hasClass("magic");
+
+-------------------------------------------------------------------
+MANIPULATING content using Jquery:
+
+$("button").html("<em>yogendra</em>")   // this is similar to innerHTML(we can change the html including the text)
+$("button").text("yogendra")      //this is similar to textContent( we can just change the text)
+
+------------------------------------------------------------------
+Change the attribute of  an HTML Tag:
+
+$("a").attr("href","https://www.youtube.com/")  // to change the attribute of an element
+
+
+$("a").attr("class");     //to list all the classes related to this
+
+
+----------------------------------------------------------------------------------
+
+
+    CLICK EVENT LISTENER: 
+
+$("button").click(function(){
+
+    $("h1").html("<marquee>Yogendra</marquee>");
+
+});
+
+
+KEYPRESS EVENT LISTERNER:
+
+$("input").keypress(function(event){             //You can use document instead of input to select the entire document
+    console.log(event.key);
+});
+
+
+
+// $("input").keypress(function(event){          this is to select the input tag
+//     console.log(event.key);
+// });
+
+
+//to select entire document we use this
+
+
+// $(document).keypress(function(event){
+//      $("h2").text(event.key);
+// });
+
+
+// $("h2").on("mouseover",function(){
+//     $("h2").css("color","yellow");
+// });
+
+--------------------------------------------------------------------------------
+
+$("h1").before("<button>hello</button>");    //this will add a button before your tag
+$("h1").after("<button>hello</button>");      //this will add a button after your tag
+
+$("h1").prepend("<button>hello</button>"); //this will add a button just before the content of your tag
+$("h1").append("<button>hello</button>"); //this will add a button just after the content of your tag
+
+---------------------------------------------------------------------------------
+  SHOW AND HIDE FUCNTIONS
+
+$("button").on("click",function(){
+    $("h2").hide();
+});
+
+$("button").on("click",function(){
+    $("h2").show();
+});
+
+$("button").on("click",function(){
+    $("h2").toggle();
+});
+
+
+$("button").on("click",function(){
+    $("h2").fadeOut();
+});
+
+$("button").on("click",function(){
+    $("h2").fadeIn();
+});
