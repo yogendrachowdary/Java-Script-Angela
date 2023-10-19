@@ -18,7 +18,7 @@ buttonAnimation(val);
 
 }
 
-
+//here we are adding event listener to the keypress in the keyboard so we are not using the query selector
 document.addEventListener("keypress",function (event) {
 
     makeSound(event.key);
